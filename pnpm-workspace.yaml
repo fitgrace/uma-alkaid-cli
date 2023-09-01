@@ -1,0 +1,5 @@
+# 定义 workspace 在哪个目录
+packages:
+  - 'packages/*'
+  - 'apps/*'
+  - 'docs'

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
+    "jsx": "react",
+    "allowJs": true,
+    "sourceMap": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules", "lib"]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "uma-alkaid",
+  "private": true,
+  "scripts": {
+    "lint:fix": "eslint --fix --cache --quiet --ext .js,.jsx,.ts,.tsx packages/*/src/",
+    "postinstall": "simple-git-hooks",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged --concurrent false",
+    "commit-msg": "pnpm exec tsx scripts/verify-commit.ts $1"
+  },
+  "lint-staged": {
+    "{apps,packages}/*/src/*.{ts?(x),js?(x)}": [
+      "eslint --cache --fix"
+    ]
+  },
+  "devDependencies": {
+    "@antfu/eslint-config-ts": "^0.41.0",
+    "@types/node": "^20.5.7",
+    "eslint": "^8.48.0",
+    "lint-staged": "^14.0.1",
+    "picocolors": "^1.0.0",
+    "simple-git-hooks": "^2.9.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.2.2"
+  }
+}
